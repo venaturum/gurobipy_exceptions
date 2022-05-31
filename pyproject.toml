@@ -1,0 +1,30 @@
+# Poetry pyproject.toml: https://python-poetry.org/docs/pyproject/
+
+
+[tool.poetry]
+name = "gurobipy_exceptions"
+version = "0.1.0"
+description = "Extending and patching gurobipy exceptions.  This is neither produced, or endorsed, by Gurobi!"
+readme = "README.md"
+authors = ["Riley Clement <venaturum@gmail.com>"]
+maintainers = ["Riley Clement <venaturum@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6.2"
+gurobipy = ">=9"
+
+
+[tool.poetry.dev-dependencies]
+isort = ">=5.8"
+black = ">=22"
+flake8 = ">=3.9"
+
+[tool.isort]
+# make it compatible with black
+profile = "black"
+multi_line_output = 3
+src_paths = ["."]
+
+[build-system]
+requires = ["poetry>=1.0"]
+build-backend = "poetry.masonry.api"
